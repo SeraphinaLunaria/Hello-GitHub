@@ -23,15 +23,28 @@ A complete guide covering:
 - Legal and ethical considerations
 
 ### 2. Practical Examples
-**Directory:** `examples/`
+**Directory:** `examples/` | **Full Documentation:** `TOOLS_GUIDE.md`
 
-Ready-to-run Python scripts demonstrating key concepts:
+9 ready-to-run Python security tools:
 
-- **password_validator.py** - Comprehensive password strength checker with entropy calculation
-- **ip_blocklist.py** - IP address blocklist management system
-- **file_integrity_checker.py** - Monitor files for unauthorized changes using cryptographic hashes
+**Basic Security Tools:**
+- **password_validator.py** - Advanced password strength checker with entropy calculation
+- **ip_blocklist.py** - IP address blocklist management with network range support
+- **file_integrity_checker.py** - File integrity monitoring using cryptographic hashes
 
-All examples include full documentation and can be run directly from the command line.
+**Network Security:**
+- **network_packet_analyzer.py** - Packet capture and analysis with threat detection
+- **dns_security_checker.py** - Comprehensive DNS security and configuration validator
+
+**Web & Application Security:**
+- **web_security_scanner.py** - Web application vulnerability scanner
+- **secure_messaging.py** - End-to-end encrypted messaging (RSA + AES)
+
+**System Security:**
+- **system_security_audit.py** - Complete Linux/Unix security audit tool
+- **malware_detection.py** - Signature and heuristic-based malware detector
+
+All tools include interactive modes, detailed reports, and comprehensive documentation.
 
 ### 3. Hands-On Exercises
 **File:** `EXERCISES.md`
@@ -75,21 +88,26 @@ source cybersec_env/bin/activate  # On Windows: cybersec_env\Scripts\activate
 
 3. **Install required packages:**
 ```bash
-pip install scapy cryptography requests pycryptodome bcrypt
+pip install cryptography requests beautifulsoup4 dnspython
+pip install python-magic bcrypt  # Optional
 ```
 
 4. **Read the guide:**
 Start with `Python_Cybersecurity_Guide.md` for comprehensive learning.
 
-5. **Run examples:**
+5. **Explore the tools:**
+Read `TOOLS_GUIDE.md` for detailed documentation on all 9 security tools.
+
+6. **Run examples:**
 ```bash
 cd examples
 python3 password_validator.py
-python3 ip_blocklist.py
-python3 file_integrity_checker.py
+python3 web_security_scanner.py
+python3 dns_security_checker.py
+# See TOOLS_GUIDE.md for all tools
 ```
 
-6. **Practice with exercises:**
+7. **Practice with exercises:**
 Open `EXERCISES.md` and start solving problems!
 
 ## Learning Path
@@ -108,18 +126,46 @@ Open `EXERCISES.md` and start solving problems!
 
 ## Topics Covered
 
+**Cryptography & Encryption:**
 - Password validation and strength checking
-- IP address management and validation
+- Cryptographic hashing (MD5, SHA-256)
+- Symmetric encryption (AES)
+- Asymmetric encryption (RSA)
+- End-to-end encryption
+- Digital signatures
+
+**Network Security:**
+- Packet capture and analysis
+- Protocol analysis (TCP, UDP, ICMP)
+- Port scanning and detection
+- DNS security and DNSSEC
+- Network threat detection
+- Traffic analysis
+
+**Web Security:**
+- Security headers validation
+- SSL/TLS configuration
+- Cookie security
+- Form security analysis
+- SQL injection detection
+- XSS vulnerability scanning
+- Information disclosure
+
+**System Security:**
 - File integrity monitoring
-- Cryptographic hashing
-- Encryption and decryption
-- Network security fundamentals
-- Port scanning
-- Log analysis and parsing
-- Intrusion detection
-- Web security headers
-- Input validation and sanitization
+- System configuration auditing
+- User account security
+- File permission auditing
+- Firewall configuration
+- Service security assessment
+
+**Threat Detection:**
+- IP address blocklisting
 - Brute force attack detection
+- Malware detection (signature & heuristic)
+- Intrusion detection patterns
+- Log analysis and parsing
+- Suspicious activity monitoring
 
 ## Important Notes
 
